@@ -1,0 +1,151 @@
+QUESTÃO 1:
+
+def conta(nt1,nt2):
+	media=0
+	media=(nt1+nt2)/2
+	return media
+from questao1 import conta
+for i in range (5):
+	nome=input('Informe o nome do aluno: ')
+	nt1=float(input('Informe a primeira nota: '))
+	nt2=float(input('Informe a segunda nota: '))
+	print('O aluno', nome, 'ficou com a média de: ', conta(nt1,nt2))
+
+------------------------------------------------------------------------------------	
+QUESTÃO 2:
+
+
+def menor():
+    def min(nt1,nt2):
+        if nt1>nt2:
+            x=nt1
+        else:
+            x=nt2
+        return x
+from questao2 import menor
+nt1=int(input('Digite o primeiro numero: '))
+nt2=int(input('Digite o segundo numero: '))
+x=min(nt1,nt2)
+print(x,'eh o maior')
+
+------------------------------------------------------------------------------------	
+QUESTÃO 3:
+
+def fatorial(n):
+	x=1
+	for i in range (0,n):
+		x=x*(n-1)
+	return x
+from questao3 import fatorial
+n=int(input('Informe o número: '))
+print (fatorial(n))
+
+------------------------------------------------------------------------------------	
+QUESTÃO 4:
+
+def primo(num):
+	pri=True
+	for i in range (2,num):
+		if num%i==0:
+			pri=False
+			break
+	return pri
+
+def gemeos(i, gem):
+	gemeo=False
+	ver=i-gem
+	if ver==2 or ver ==-2:
+		gemeo=True
+	return gemeo		
+from questao4 import primo
+from questao4 import gemeos
+gem=1
+ver=0
+for i in range (1,1001):
+	if primo(gem) and primo (i):
+		if gemeos(i,gem):
+			print (gem, 'e',i,'sao gemeos')
+		gem=i
+
+------------------------------------------------------------------------------------	
+QUESTÃO 5:
+
+def soma(n,l1,l2,l3):
+	concat1=''
+	concat2=''
+	
+	for i in range (n):
+		x=int(input('Digite os valores da lista 1: '))
+		l1.append(x)
+		
+	for i in range (n):
+		y=int(input('Digite os valores da lista 2: '))
+		l2.append(y)
+		
+		
+	for i in range (n):
+		l3.append(0)
+	
+	for i in range (n-1,-1,-1):
+
+
+		if l1[i]+l2[i] >=10:
+			l3[i]=l1[i]+l2[i]-10
+			l3[i-1]=l3[i-1]+1
+			
+		else:
+			l3[i]=l3[i]+l1[i]+l2[i]
+			
+			if l3[i]>=10:
+				l3[i]=l3[i]-10
+				l3[i-1]=l3[i-1]+1
+			
+	
+from questao5 import soma
+n1=[]
+n2=[]
+n3=[]
+n = int(input('Digite quantos valores terá cada lista: '))
+soma(n, n1, n2, n3)
+
+
+print('Resultado L3:', n3)
+
+
+------------------------------------------------------------------------------------	
+QUESTÃO 6:
+
+
+def nperfeito(n):
+	perf=0
+	for i in range (1,n):
+		if n%i==0:
+			perf+=i
+	if perf==n:
+		return 1
+	else:
+		return 0
+from questao6 import nperfeito
+n=int(input('Informe o número para saber se este é perfeito: '))
+if nperfeito(n)==1:
+	print(n, 'É perfeito')
+if nperfeito(n)!=1:
+	print(n,'Não é perfeito')
+
+
+
+------------------------------------------------------------------------------------	
+questão 7: 
+
+
+def notas(num):
+	cont=0
+	media=0
+	for i in range (num):
+		nota=float(input('Informe a Nota: '))
+		cont+=nota
+	media=(cont)/num
+	return (media)
+from questao7 import notas
+num=int(input('Informe o número de notas: '))
+print (notas(num))
