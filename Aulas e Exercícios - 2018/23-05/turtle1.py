@@ -1,0 +1,17 @@
+from turtle import *
+#color('green')
+#forward(100)
+#right(45)
+#color('blue')
+#forward(50)
+#right(45)
+#color('green')
+#forward(100)
+#color('blue')
+#forward(100)
+#done()
+for i in range (4):
+	color('blue')
+	forward(100)
+	right(90)
+done()

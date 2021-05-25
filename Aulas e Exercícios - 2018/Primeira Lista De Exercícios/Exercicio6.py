@@ -1,0 +1,5 @@
+Com_base=float(input('Informe o comprimento da base: '))
+Com_aresta1=float(input('Informe o comprimento da aresta da direita: '))
+Com_aresta2=float(input('Informe o comprimento da aresta da esquerda: '))
+soma=(Com_base+Com_aresta1+Com_aresta2)
+print('O perímetro é de: ', soma)

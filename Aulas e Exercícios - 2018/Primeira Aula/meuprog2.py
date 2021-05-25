@@ -1,0 +1,5 @@
+print('Meu segundo programa em Python')
+km_h=int(input('Informe km/h: '))
+temp=float(input('Informe a tempo da viagem em horas: '))
+Dist=(km_h*temp)
+print('A distância em km é de',Dist)  

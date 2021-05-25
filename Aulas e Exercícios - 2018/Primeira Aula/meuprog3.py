@@ -1,0 +1,8 @@
+print('Meu terceiro programa em Python')
+prc_prod=float(input('Informe o preço do produto: '))
+jur=float(input('Infome o juro: '))
+num_par=int(input('Informe o número de parcelas: '))
+pr_jur=1+(jur/100)
+vlr_juro=(pr_jur*prc_prod)
+valor_parcela=(vlr_juro / num_par)
+print('O valor das parcelas será de R$: ', valor_parcela)
